@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.3/css/bulma.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.0.6/css/all.css"
+    />
+    <!-- Latest compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <div id="app">
+      <div class="container">
+        <div v-for:"post in submissions" style="border: 1px solid gray;" class="row mt-5 p-3" v-bind:key="post.id">
+          <div class="col-sm-2">
+            <br /><br />
+            <span class="p-1"
+              ><i class="fas fa-angle-up" style="font-size: 36px;"></i> </span
+            ><span
+              style="
+                font-family: 'vazir';
+                background-color: silver;
+                border-radius: 10px;
+              "
+              class="text-dark p-1"
+              style="font-size: 66px; font-weight: bolder;"
+              >{{post.vote_number}}</span
+            >
+          </div>
+          <div class="col-sm-8 text-center">
+            <div class="row">
+              <div class="col-sm-4">
+                <span
+                  ><img
+                    style="width: 160px; height: 140px;"
+                    class="rounded mt-4"
+                    src="public/images/submissions/image-rose.png"
+                    alt=""
+                /></span>
+              </div>
+              <div class="col-sm-8">
+                <h2 style="font-family: 'vazir';" class="p-3 mt-3 text-primary">
+                  پنج نوع پروژه‌ای که نباید در نمونه کار خود لحاظ کنید
+                </h2>
+                <p style="font-family: 'vazir';" class="text-secondary">
+                  وقتی صحبت از نمونه کار طراحان می‌شود؛ به این نکته توجه کنید که
+                  پروژه بزرگتر ضرورتاً پروژه بهتری نیست
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            style="border: solid 2px rgb(170, 175, 170); border-radius: 8px;"
+            class="col-sm-2 p-2"
+          >
+            <img
+              style="
+                width: 80px;
+                margin-left: 35px;
+                margin-top: 25px;
+                margin-bottom: 14px;
+              "
+              src="public/images/avatars/molly.png"
+              alt=""
+              class="rounded-circle mr-3"
+            />
+            <p class="text-center">
+              <span style="font-family: 'vazir';" class="badge badge-dark"
+                >نوشته شده توسط : {{message}}</span
+              >
+            </p>
+          </div>
+        </div>
+        <br /><br />
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+    <script src="./seed.js"></script>
+    <script src="./main.js"></script>
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  </body>
+</html>
